@@ -1,172 +1,84 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 
-    font-family: "Noto Sans KR", sans-serif;
-}
-:root{
-    --point-color: rgb(237, 255, 73);    
-}
-
-body{
-    overflow-x: hidden;
-}
-main{
-    height: 200vh;
-
-}
-
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.align{
-    width: calc(100% - 100px);
-}
-header .logo{
-    font-weight: 300;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-
-section:nth-child(1){
-    width: calc(100% - 100px);
-    height: 100vh;
-    background-color: rgb(235, 228, 220);
-    padding: 0 50px;
-}
-.titles{
-    list-style: none;
-    font-size: 120px;
-    font-weight: 800;
-    color: rgba(0, 0, 0, 0.2);
-    
-    position: fixed;
-    right: 23%;
-    top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    z-index: 10;
-
-    transition: .9s cubic-bezier(0.5, 0, 0, 1);
-}
-.titles li{
-    cursor: pointer;
-    transition: .3s;
-    position: relative;
-
-    transition: .5s cubic-bezier(0.5, 0, 0, 1);
-}
-.titles li:nth-child(2){
-    right: 300px;
-}
-.titles.secondStart{
-    right: 50px;
-    font-size: 18px;
-    gap: 5px;
-}
-.titles.secondStart li:nth-child(2){
-    right: 0;
-}
-/* .titles li::after{
-    content: "";
-    width: 0%;
-    height: 10px;
-    background-color: black;
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: .9s cubic-bezier(0.5, 0, 0, 1);
-} */
-/* .titles li:hover::after{
-    width: 100%;
-} */
-.titles li:hover{
+    text-decoration: none;
     color: black;
 }
-.main_circle{
-    width: 600px;
-    height: 600px;
-    border-radius: 100%;
-    background-color: rgb(234, 255, 47);
-    /* border: 1px solid rgb(255, 191, 0); */
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    transition: 1.5s cubic-bezier(0.5, 0, 0, 1);
-}
-.main_circle.active {
-    animation: circle_active .9s cubic-bezier(0.5, 0, 0, 1) infinite;
-}
-@keyframes circle_active {
-    0%{
-        width: 500px;
-        height: 500px;
-    }
-    50%{
-        width: 600px;
-        height: 600px;
-    }
-    100%{
-        width: 500px;
-        height: 500px;
-    }
-}
 
-
-
-section:nth-child(2){
+main{
     width: 100%;
     height: 100vh;
-    background-color: rgb(235, 228, 220);
+    background: #eeeeee;
 }
-.skill_list{
-    margin: 0 0 0 50px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+.background{
+    padding: 0 0 0 10px;
 }
-.skill_title{
-    font-size: 24px;
-    margin: 0 0 15px 10px;
+.title{
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0px 0 20px 0;
 }
-.skill_img{
-    display: flex;
-    gap: 20px;
+.list{
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;   
+    gap: 15px;
 }
-.skill_img li img{
-    width: 100px;
+.topBox{
+    width: 70%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px 50px;
+    margin: 0 auto 30px auto;
+    box-shadow: 5px 5px 20px rgba(140, 140, 140, 0.1);
+    position: relative;
 }
-
-
-
-
-section:nth-child(3){
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(235, 228, 220);
+.list li{
+    margin: 0 0 0 0 10px;
+    height: fit-content;
+    border-right: 1px solid #555;
+    padding: 0 15px 0 0;
 }
+.modify{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #555;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
 
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.delete{
+    border: unset;
+    padding-top: 3px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+}
+.modify a{
+    font-size: 14px;
+}
+.descrip{
+    width: 70%;
+    padding: 30px 50px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(140, 140, 140, 0.1);
+    margin: 0 auto;
 
-
-section:nth-child(4){
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(235, 228, 220);
+    /* position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, 0); */
 }
