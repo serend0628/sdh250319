@@ -49,8 +49,9 @@ var app = http.createServer(function (request, response) {
         var description = 'Hello, Node.js';
         var list = templateList(filelist);
         var template = templateHTML(title, list,
-          `<h2>${title}</h2>${description}`,
-          `<a href="/create">create</a>`
+          `<h2 id="welcome">${title}</h2>${description}`,
+          `<div class="modify"><a href="/create">create</a></div>`
+          // first screen
         );
         response.writeHead(200);
         response.end(template);

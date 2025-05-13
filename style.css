@@ -16,6 +16,9 @@ main{
 .background{
     padding: 0 0 0 10px;
 }
+#welcome{
+    margin: 20px 0 0 0;
+}
 .title{
     width: 100%;
     font-size: 40px;
@@ -31,6 +34,7 @@ main{
 }
 .topBox{
     width: 70%;
+    height: max-content;
     background-color: white;
     border-radius: 10px;
     padding: 30px 50px;
@@ -52,10 +56,11 @@ main{
     width: fit-content;
     padding: 5px 10px;
     border-radius: 5px;
+    margin: 25px 0 0 0;
 
-    position: absolute;
+    /* position: absolute;
     right: 20px;
-    bottom: 20px;
+    bottom: 20px; */
 }
 .delete{
     border: unset;
